@@ -1,0 +1,19 @@
+<html>
+<head>
+<script>
+
+function clickListenCat(ev) {
+  alert("ClickListenCat");
+}
+
+function onLoad() {
+  this.addEventListener("cat", clickListenCat); 
+  event = new CustomEvent("cat", {"detail": {"hascheezburger": true}});
+  this.dispatchEvent(event);
+}
+
+</script>
+<head>
+<body id="body" onload="onLoad()">
+</body>
+</html>
